@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body, html {
+	text-align: center;
+	height: 100%;
+	overflow: hidden;
+	font-family: poppins;
+}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: darkcyan;
+}
+nav ul li {
+	display: inline-block;
+}
+nav ul li a {
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	text-decoration: none;
+	padding: 25px;
+}
+section {
+	height: 100%;
+	width: 100%;
+	display: table;
+	pointer-events: none;
+	z-index: 0;
+	background: #262626;
+	transition: transform 0.45s cubic-bezier(0, 0, 0.20, 1);
+}
+section h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 70px;
+	text-transform: uppercase;
+}
+a[id="home"]:target~#home {
+	transform: translate3d(0, 0, 0);
+}
+a[id="about"]:target~#about {
+	transform: translate3d(0, -100%, 0);
+}
+a[id="portfolio"]:target~#portfolio {
+	transform: translate3d(0, -200%, 0);
+}
+a[id="services"]:target~#services {
+	transform: translate3d(0, -300%, 0);
+}
+a[id="contact"]:target~#contact {
+	transform: translate3d(0, -400%, 0);
+}
